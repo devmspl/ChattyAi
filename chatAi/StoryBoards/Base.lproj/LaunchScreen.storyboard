@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +13,66 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a83-0D-Rfz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-ia-ZY4">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="700"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BotLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-bp-uWf">
+                                                <rect key="frame" x="78.666666666666671" y="127" width="235.66666666666663" height="236"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XA7-bp-uWf" secondAttribute="height" multiplier="1:1" id="NXA-fl-qn3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatGenix AI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eio-41-CUo">
+                                                <rect key="frame" x="133" y="413" width="127.33333333333331" height="26.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Eio-41-CUo" firstAttribute="top" secondItem="XA7-bp-uWf" secondAttribute="bottom" constant="50" id="HpM-P6-mpb"/>
+                                            <constraint firstItem="XA7-bp-uWf" firstAttribute="centerX" secondItem="iWQ-ia-ZY4" secondAttribute="centerX" id="KHh-A5-Uw0"/>
+                                            <constraint firstItem="XA7-bp-uWf" firstAttribute="width" secondItem="iWQ-ia-ZY4" secondAttribute="width" multiplier="0.6" id="Rug-CL-Txs"/>
+                                            <constraint firstItem="XA7-bp-uWf" firstAttribute="centerY" secondItem="iWQ-ia-ZY4" secondAttribute="centerY" multiplier="0.7" id="WwU-jM-J9l"/>
+                                            <constraint firstItem="Eio-41-CUo" firstAttribute="centerX" secondItem="iWQ-ia-ZY4" secondAttribute="centerX" id="cEs-tT-Bpv"/>
+                                            <constraint firstAttribute="height" constant="700" id="d5Y-h7-qgv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iWQ-ia-ZY4" firstAttribute="bottom" secondItem="bsn-ZN-RCB" secondAttribute="bottom" id="1xe-nr-e2V"/>
+                                    <constraint firstItem="iWQ-ia-ZY4" firstAttribute="trailing" secondItem="bsn-ZN-RCB" secondAttribute="trailing" id="I9H-u4-EVu"/>
+                                    <constraint firstItem="iWQ-ia-ZY4" firstAttribute="leading" secondItem="bsn-ZN-RCB" secondAttribute="leading" id="RKS-Tq-ova"/>
+                                    <constraint firstItem="iWQ-ia-ZY4" firstAttribute="top" secondItem="bsn-ZN-RCB" secondAttribute="top" id="h3Y-aR-Zp5"/>
+                                    <constraint firstItem="iWQ-ia-ZY4" firstAttribute="width" secondItem="Hxj-bX-p2c" secondAttribute="width" id="iMg-Pk-feV"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bsn-ZN-RCB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Hxj-bX-p2c"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.18823529411764706" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a83-0D-Rfz" secondAttribute="trailing" id="H8y-VX-9H8"/>
+                            <constraint firstItem="a83-0D-Rfz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QGF-KX-KfO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a83-0D-Rfz" secondAttribute="bottom" id="nsw-FJ-RH0"/>
+                            <constraint firstItem="a83-0D-Rfz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yf9-vN-8cf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BotLogo" width="393" height="360"/>
+    </resources>
 </document>

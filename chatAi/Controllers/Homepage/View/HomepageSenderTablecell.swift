@@ -9,6 +9,8 @@ import UIKit
 
 class HomepageSenderTablecell: UITableViewCell {
 
+    @IBOutlet weak var SenderTextField: UILabel!
+//    @IBOutlet weak var MessageUser: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

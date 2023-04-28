@@ -23,7 +23,7 @@ extension OtpVC: UITextFieldDelegate{
                 txtField4.becomeFirstResponder()
             }
             if textField == txtField4{
-                TxtField1.resignFirstResponder()
+                txtField4.resignFirstResponder()
             }
             
             textField.text = string
@@ -41,9 +41,9 @@ extension OtpVC: UITextFieldDelegate{
             if textField == txtField4{
                 txtField3.becomeFirstResponder()
             }
-            if textField == TxtField1{
-                TxtField1.resignFirstResponder()
-            }
+//            if textField == TxtField1{
+//                TxtField1.resignFirstResponder()
+//            }
             
             textField.text = ""
             return false

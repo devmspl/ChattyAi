@@ -8,11 +8,18 @@
 import UIKit
 
 class AboutusVC: UIViewController {
-
+    
+    @IBOutlet weak var AboutusTxtLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+   @IBAction func backTapped(_ sender: UIButton){
+       navigationController?.popViewController(animated: true)
     }
     
 

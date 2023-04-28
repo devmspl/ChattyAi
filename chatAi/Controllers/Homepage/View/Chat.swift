@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+
+struct chat {
+    let userName: String?
+    let Message: String?
+    let type: ChatType?
+}
+
+enum ChatType{
+    case Sender
+    case Recever
+}

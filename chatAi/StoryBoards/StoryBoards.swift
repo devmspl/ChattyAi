@@ -10,5 +10,7 @@ import UIKit
 
 struct StoryBoards{
     public static let Auth = UIStoryboard(name: "Auth", bundle: nil)
+    public static let Account = UIStoryboard(name: "AccountScreen", bundle: nil)
+    public static let TabBar = UIStoryboard(name: "TabBarScreens", bundle: nil)
     
 }

@@ -8,7 +8,9 @@
 import UIKit
 
 class AccountCell: UITableViewCell {
-
+    @IBOutlet weak var settingName: UILabel!
+    @IBOutlet weak var SettingImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Set the text color of unselected tab bar items
+//        let colortabText = SetcolorRgb(red: 23, green: 206, blue: 146)
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.green], for: .selected)
+
+        // Set the text color of selected tab bar items
+        
+        
         return true
     }
 

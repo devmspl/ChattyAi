@@ -7,14 +7,21 @@
 
 import UIKit
 
-class SignupVC: UIViewController {
+class Landing: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    @IBAction func signUpTapped(_ sender: UIButton){
+        let vc = StoryBoards.Auth.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func LoginTapped(_ sender: UIButton){
+        let vc = StoryBoards.Auth.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation

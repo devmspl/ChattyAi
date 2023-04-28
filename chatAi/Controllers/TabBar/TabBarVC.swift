@@ -8,10 +8,14 @@
 import UIKit
 
 class TabBarVC: UITabBarController {
-
+  //  @IBOutlet weak var barButtonItem : UITabBarItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let colortabText = SetcolorRgb(red: 23, green: 206, blue: 146)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: colortabText], for: .selected)
+        
+        self.tabBar.unselectedItemTintColor = UIColor.white
+        
         // Do any additional setup after loading the view.
     }
     

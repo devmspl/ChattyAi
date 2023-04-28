@@ -8,14 +8,40 @@
 import UIKit
 
 class PersonalinfoVC: UIViewController {
-
+    @IBOutlet weak var fullnameFild: UITextField!
+    @IBOutlet weak var EmailField: UITextField!
+    @IBOutlet weak var ChanePasswordFiled: UITextField!
+    @IBOutlet weak var profilePic: UIImageView!
+    var imageUser: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func PlusTapped(_ sender: UIButton) {
+        
+        PickImage()
+    }
+    @IBAction func DeactiveTapped(_ sender: UIButton){
+        navigationController?.popViewController(animated: true)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getUserByIdApiCall {[self] name, email, image, MessageApi in
+            fullnameFild.text = name
+            EmailField.text = email
+            DispatchQueue.main.asyncAfter(deadline: .now()+3){
+                if MessageApi != nil {
+                    self.AlertDisplay(titleAlert: MessageApi!, messageAlert: "", ActionTitle: "OK")
+                }
+            }
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
